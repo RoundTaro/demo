@@ -21,7 +21,7 @@ public class TestController {
 
     @RequestMapping("/findUserById")
 //    @InvokeLog 加了没用，只能在service层和dao层加，因为这两层在spring容器中，但是controller在springmvc容器中，后者是前者子容器，不能使用父容器方法
-    //所以controller层用拦截器增强，其余层可用aop增强
+    //所以controller层用拦截器增强，其余层可以用aop增强
     public ResponseResult<User> findUserById(@RequestParam Integer id) {
         System.out.println("hello");
         User user = userService.findUserById(id);
