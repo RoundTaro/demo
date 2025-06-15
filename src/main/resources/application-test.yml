@@ -1,0 +1,15 @@
+server:
+  port: 8082
+
+debug: true
+logging:
+  level:
+    com.example.test: debug
+
+#监控
+management:
+  endpoints:
+    enabled-by-default: true #配置启用所有端点
+  web:
+    exposure:
+      include: "*" #web端暴露所有端点
